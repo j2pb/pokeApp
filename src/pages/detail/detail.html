@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar color="red">
+    <ion-title>Detalles {{ item.name }}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <img src="{{item.sprites.front_default}}" />
+    <ion-card-content>
+      <ion-card-title text-center>
+        {{ item.name }}
+      </ion-card-title>
+      <ion-row>
+        <ion-col>
+          <div>
+            <strong>Peso: </strong>{{ item.weight }}</div>
+        </ion-col>
+        <ion-col>
+          <div>
+            <strong>Número: </strong>{{ item.id }}</div>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

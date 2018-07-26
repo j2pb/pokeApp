@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar color="red">
+    <ion-title text-center>
+      pokeApp
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+
+  <form [formGroup]="searchForm" (ngSubmit)="buscarPokemones()">
+    <h3 text-center>Buscar pokemon:</h3>
+    <ion-list>
+      <ion-item>
+        <ion-label fixed>id o nombre:</ion-label>
+        <ion-input formControlName="idOrName" type="text" value=""></ion-input>
+      </ion-item>
+    </ion-list>
+    <button ion-button full type="submit" [disabled]="!searchForm.valid|| sentForm">Buscar</button>
+  </form>
+  <!-- fb Login-->
+  <ion-footer no-shadow>
+    <ion-item *ngIf="showUser">
+      <ion-avatar item-left>
+        <img [src]="user.picture.data.url" alt="">
+      </ion-avatar>
+      <h2>{{user.name}}</h2>
+      <p>{{user.email}}</p>
+    </ion-item>
+    <ion-toolbar position="bottom" padding>
+      <button ion-button full (click)="loginFacebook()">Login con facebook</button>
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>
