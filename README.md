@@ -1,4 +1,6 @@
 # pokeApp
+Pokemon searcher for bosc.solutions
+
 ### Install
 
 ```
